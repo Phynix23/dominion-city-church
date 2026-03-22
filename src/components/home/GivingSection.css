@@ -1,0 +1,112 @@
+/* src/components/home/GivingSection.css */
+.giving-section {
+  padding: 100px 0;
+  background: linear-gradient(135deg, var(--secondary-blue), var(--dark-bg));
+  position: relative;
+  overflow: hidden;
+}
+
+.giving-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' opacity='0.1'%3E%3Cpath d='M50 15 L61 39 L88 41 L67 58 L73 85 L50 71 L27 85 L33 58 L12 41 L39 39 Z' fill='%234169E1'/%3E%3C/svg%3E");
+  background-size: 100px;
+  animation: float 20s linear infinite;
+}
+
+.giving-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.giving-content h2 {
+  font-size: 48px;
+  color: var(--text-light);
+  margin-bottom: 20px;
+}
+
+.giving-content > p {
+  color: var(--text-gray);
+  font-size: 18px;
+  margin-bottom: 50px;
+}
+
+.giving-options {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-bottom: 60px;
+}
+
+.giving-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  padding: 40px 30px;
+  border-radius: 20px;
+  transition: var(--transition-smooth);
+  border: 1px solid rgba(65, 105, 225, 0.2);
+}
+
+.giving-card:hover {
+  transform: translateY(-10px);
+  border-color: var(--primary-blue);
+  box-shadow: var(--shadow-blue);
+}
+
+.giving-icon {
+  font-size: 48px;
+  color: var(--primary-blue);
+  margin-bottom: 20px;
+}
+
+.giving-card h3 {
+  font-size: 22px;
+  color: var(--text-light);
+  margin-bottom: 15px;
+}
+
+.giving-card p {
+  font-size: 14px;
+  margin-bottom: 25px;
+  color: var(--text-gray);
+}
+
+.bank-details {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 40px;
+  border-radius: 20px;
+  border: 1px solid var(--primary-blue);
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.bank-details h4 {
+  font-size: 24px;
+  color: var(--primary-blue);
+  margin-bottom: 20px;
+}
+
+.bank-details p {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: var(--text-light);
+}
+
+@media (max-width: 1024px) {
+  .giving-options {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .giving-content h2 {
+    font-size: 32px;
+  }
+}

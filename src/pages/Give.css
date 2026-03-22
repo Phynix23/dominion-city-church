@@ -1,0 +1,298 @@
+/* src/pages/Give.css */
+.give-hero {
+  height: 40vh;
+  background: linear-gradient(135deg, var(--primary-blue-dark), var(--dark-bg));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-top: 80px;
+}
+
+.give-hero h1 {
+  font-size: 56px;
+  color: var(--text-light);
+  margin-bottom: 20px;
+}
+
+.give-hero p {
+  font-size: 20px;
+  color: var(--text-gray);
+}
+
+.give-main {
+  padding: 80px 0;
+  background: var(--dark-bg);
+}
+
+.give-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.amount-section {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 30px;
+  border-radius: 20px;
+  margin-bottom: 30px;
+}
+
+.amount-section h3 {
+  font-size: 20px;
+  color: var(--text-light);
+  margin-bottom: 20px;
+}
+
+.amount-presets {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.amount-btn {
+  padding: 12px 25px;
+  background: transparent;
+  border: 2px solid var(--primary-blue);
+  color: var(--text-light);
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+  font-family: inherit;
+}
+
+.amount-btn:hover,
+.amount-btn.active {
+  background: var(--primary-blue);
+  color: var(--white);
+}
+
+.custom-amount {
+  padding: 12px 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(65, 105, 225, 0.3);
+  border-radius: 10px;
+  color: var(--text-light);
+  width: 150px;
+  font-family: inherit;
+  font-size: 16px;
+}
+
+.custom-amount:focus {
+  outline: none;
+  border-color: var(--primary-blue);
+}
+
+.payment-methods {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 30px;
+  border-radius: 20px;
+  margin-bottom: 30px;
+}
+
+.payment-methods h3 {
+  font-size: 20px;
+  color: var(--text-light);
+  margin-bottom: 20px;
+}
+
+.methods-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+}
+
+.method-btn {
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(65, 105, 225, 0.3);
+  color: var(--text-gray);
+  border-radius: 12px;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-family: inherit;
+  font-size: 14px;
+}
+
+.method-btn.active,
+.method-btn:hover {
+  background: var(--primary-blue);
+  color: var(--white);
+  border-color: var(--primary-blue);
+}
+
+.card-form {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 30px;
+  border-radius: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--text-gray);
+  font-size: 14px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 14px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(65, 105, 225, 0.3);
+  border-radius: 10px;
+  color: var(--text-light);
+  font-family: inherit;
+  font-size: 14px;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: var(--primary-blue);
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.bank-details {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 30px;
+  border-radius: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+.bank-info h4 {
+  font-size: 22px;
+  color: var(--primary-blue);
+  margin-bottom: 20px;
+}
+
+.detail-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  color: var(--text-gray);
+}
+
+.detail-item strong {
+  color: var(--text-light);
+}
+
+.qr-code {
+  text-align: center;
+}
+
+.qr-code img {
+  width: 150px;
+  height: 150px;
+  background: white;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.qr-code p {
+  color: var(--text-gray);
+  font-size: 12px;
+}
+
+.ussd-details {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 30px;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.ussd-details h4 {
+  font-size: 22px;
+  color: var(--primary-blue);
+  margin-bottom: 20px;
+}
+
+.ussd-code {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  border-radius: 10px;
+  font-family: monospace;
+  font-size: 24px;
+  color: var(--primary-blue);
+  margin: 20px 0;
+}
+
+.ussd-note {
+  color: var(--text-gray);
+  font-size: 14px;
+}
+
+.crypto-details {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 30px;
+  border-radius: 20px;
+}
+
+.crypto-details h4 {
+  font-size: 22px;
+  color: var(--primary-blue);
+  margin-bottom: 20px;
+}
+
+.crypto-address {
+  margin-bottom: 20px;
+  padding: 15px;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+}
+
+.crypto-address strong {
+  display: block;
+  color: var(--text-light);
+  margin-bottom: 8px;
+}
+
+.crypto-address code {
+  display: block;
+  color: var(--primary-blue);
+  font-family: monospace;
+  word-break: break-all;
+}
+
+@media (max-width: 768px) {
+  .give-hero h1 {
+    font-size: 36px;
+  }
+  
+  .methods-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .bank-details {
+    grid-template-columns: 1fr;
+  }
+  
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+  
+  .amount-presets {
+    justify-content: center;
+  }
+  
+  .custom-amount {
+    width: 100%;
+  }
+}

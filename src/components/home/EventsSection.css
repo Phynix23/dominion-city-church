@@ -1,0 +1,123 @@
+/* src/components/home/EventsSection.css */
+.events-section {
+  padding: 100px 0;
+  background: var(--darker-bg);
+}
+
+.events-calendar {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.event-card {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 30px;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 25px;
+  margin-bottom: 20px;
+  border-radius: 15px;
+  align-items: center;
+  transition: var(--transition-smooth);
+  border-left: 4px solid transparent;
+}
+
+.event-card:hover {
+  border-left-color: var(--primary-blue);
+  background: rgba(65, 105, 225, 0.1);
+  transform: translateX(10px);
+}
+
+.event-card.featured {
+  border: 2px solid var(--primary-blue);
+  box-shadow: var(--shadow-blue);
+}
+
+.event-date {
+  text-align: center;
+  background: rgba(65, 105, 225, 0.1);
+  padding: 15px;
+  border-radius: 10px;
+  min-width: 80px;
+}
+
+.date-day {
+  display: block;
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--primary-blue);
+  font-family: var(--font-primary);
+  line-height: 1;
+}
+
+.date-month {
+  font-size: 14px;
+  color: var(--text-gray);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.event-details h3 {
+  font-size: 22px;
+  color: var(--text-light);
+  margin-bottom: 10px;
+}
+
+.event-meta {
+  font-size: 14px;
+  color: var(--primary-blue);
+  margin-bottom: 10px;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.event-meta svg {
+  margin-right: 5px;
+}
+
+.event-description {
+  color: var(--text-gray);
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+.event-tags {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.tag {
+  background: rgba(65, 105, 225, 0.1);
+  color: var(--primary-blue);
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.events-footer {
+  text-align: center;
+  margin-top: 40px;
+}
+
+@media (max-width: 768px) {
+  .event-card {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .event-date {
+    width: 100px;
+    margin: 0 auto;
+  }
+
+  .event-meta {
+    justify-content: center;
+  }
+
+  .event-tags {
+    justify-content: center;
+  }
+}

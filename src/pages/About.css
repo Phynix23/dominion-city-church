@@ -1,0 +1,256 @@
+/* src/pages/About.css */
+.about-hero {
+  height: 60vh;
+  background: linear-gradient(135deg, var(--dark-bg), var(--secondary-blue));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-top: 80px;
+}
+
+.about-hero h1 {
+  font-size: 56px;
+  color: var(--text-light);
+  margin-bottom: 20px;
+}
+
+.about-hero p {
+  font-size: 20px;
+  color: var(--text-gray);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.history-section {
+  padding: 80px 0;
+  background: var(--dark-bg);
+}
+
+.timeline {
+  position: relative;
+  max-width: 800px;
+  margin: 60px auto;
+}
+
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 4px;
+  background: var(--primary-blue);
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.timeline-item {
+  padding: 20px 40px;
+  position: relative;
+  width: 50%;
+  margin-bottom: 40px;
+}
+
+.timeline-item.left {
+  left: 0;
+}
+
+.timeline-item.right {
+  left: 50%;
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: var(--primary-blue);
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.timeline-item.left::before {
+  right: -10px;
+}
+
+.timeline-item.right::before {
+  left: -10px;
+}
+
+.timeline-content {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 30px;
+  border-radius: 15px;
+  border: 1px solid rgba(65, 105, 225, 0.2);
+  transition: var(--transition-smooth);
+}
+
+.timeline-content:hover {
+  transform: translateY(-5px);
+  border-color: var(--primary-blue);
+  box-shadow: var(--shadow-blue);
+}
+
+.timeline-year {
+  color: var(--primary-blue);
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.timeline-content h3 {
+  font-size: 20px;
+  color: var(--text-light);
+  margin-bottom: 10px;
+}
+
+.timeline-content p {
+  color: var(--text-gray);
+  line-height: 1.7;
+}
+
+.beliefs-section {
+  padding: 80px 0;
+  background: var(--darker-bg);
+}
+
+.beliefs-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-top: 50px;
+}
+
+.belief-card {
+  text-align: center;
+  padding: 40px 30px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  transition: var(--transition-smooth);
+  border: 1px solid rgba(65, 105, 225, 0.1);
+}
+
+.belief-card:hover {
+  transform: translateY(-10px);
+  border-color: var(--primary-blue);
+  box-shadow: var(--shadow-blue);
+}
+
+.belief-icon {
+  font-size: 48px;
+  color: var(--primary-blue);
+  margin-bottom: 20px;
+}
+
+.belief-card h3 {
+  font-size: 22px;
+  color: var(--text-light);
+  margin-bottom: 15px;
+}
+
+.belief-card p {
+  color: var(--text-gray);
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.pastor-section {
+  padding: 80px 0;
+  background: linear-gradient(135deg, var(--dark-bg), var(--secondary-blue));
+}
+
+.pastor-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.pastor-image {
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: var(--shadow-elegant);
+}
+
+.pastor-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.pastor-bio h2 {
+  font-size: 42px;
+  color: var(--text-light);
+  margin-bottom: 10px;
+}
+
+.pastor-title {
+  color: var(--primary-blue);
+  font-size: 18px;
+  margin-bottom: 25px;
+  display: block;
+}
+
+.pastor-bio p {
+  color: var(--text-gray);
+  margin-bottom: 20px;
+  line-height: 1.8;
+}
+
+.pastor-quote {
+  font-size: 20px;
+  font-style: italic;
+  color: var(--primary-blue-light);
+  border-left: 4px solid var(--primary-blue);
+  padding-left: 20px;
+  margin: 30px 0;
+}
+
+@media (max-width: 1024px) {
+  .beliefs-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .pastor-container {
+    grid-template-columns: 1fr;
+  }
+  
+  .pastor-image {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .timeline::after {
+    left: 30px;
+  }
+  
+  .timeline-item {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 20px;
+  }
+  
+  .timeline-item.right {
+    left: 0;
+  }
+  
+  .timeline-item.left::before,
+  .timeline-item.right::before {
+    left: 20px;
+  }
+  
+  .beliefs-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .about-hero h1 {
+    font-size: 36px;
+  }
+  
+  .pastor-bio h2 {
+    font-size: 32px;
+  }
+}

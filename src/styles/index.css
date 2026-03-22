@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap');
-
+/* ========== CSS VARIABLES ========== */
 :root {
   --primary-blue: #4169E1;
   --primary-blue-light: #6B8CFF;
@@ -15,21 +14,14 @@
   --text-offwhite: #F1F5F9;
   --text-gray: #CBD5E1;
   --text-dark: #1E293B;
-  --overlay-dark: rgba(0, 0, 0, 0.7);
-  --overlay-blue: rgba(65, 105, 225, 0.2);
-  --overlay-light: rgba(255, 255, 255, 0.1);
-  --gradient-primary: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue));
-  --gradient-light: linear-gradient(135deg, var(--white-off), var(--white-cream));
-  --gradient-hero: linear-gradient(135deg, var(--dark-bg), var(--primary-blue-dark));
   --font-primary: 'Cormorant Garamond', serif;
   --font-secondary: 'Inter', sans-serif;
   --transition-smooth: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
-  --transition-bounce: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-  --shadow-elegant: 0 10px 30px -10px rgba(0, 0, 0, 0.3);
   --shadow-blue: 0 5px 20px rgba(65, 105, 225, 0.3);
-  --shadow-hover: 0 20px 40px -15px rgba(65, 105, 225, 0.4);
+  --shadow-elegant: 0 10px 30px -10px rgba(0, 0, 0, 0.3);
 }
 
+/* ========== RESET & BASE ========== */
 * {
   margin: 0;
   padding: 0;
@@ -43,7 +35,7 @@ html {
 
 body {
   font-family: var(--font-secondary);
-  color: var(--text-offwhite);
+  color: var(--text-light);
   background-color: var(--dark-bg);
   line-height: 1.6;
   overflow-x: hidden;
@@ -61,11 +53,7 @@ h1, h2, h3, h4, h5, h6 {
   padding: 0 20px;
 }
 
-section {
-  position: relative;
-  overflow: hidden;
-}
-
+/* ========== BUTTONS ========== */
 .btn {
   display: inline-block;
   padding: 14px 36px;
@@ -108,6 +96,23 @@ section {
   box-shadow: var(--shadow-blue);
 }
 
+.btn-link {
+  color: var(--primary-blue);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  transition: var(--transition-smooth);
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.btn-link:hover {
+  gap: 10px;
+  color: var(--text-light);
+}
+
+/* ========== SECTION HEADERS ========== */
 .section-header {
   text-align: center;
   margin-bottom: 60px;
@@ -132,6 +137,13 @@ section {
   display: inline-block;
 }
 
+.section-description {
+  color: var(--text-gray);
+  max-width: 600px;
+  margin: 0 auto;
+  font-size: 16px;
+}
+
 .divider {
   width: 80px;
   height: 2px;
@@ -140,18 +152,7 @@ section {
   position: relative;
 }
 
-.divider i {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: var(--primary-blue);
-  background: var(--dark-bg);
-  padding: 0 20px;
-  font-size: 16px;
-}
-
-/* Animations */
+/* ========== ANIMATIONS ========== */
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -163,40 +164,10 @@ section {
   }
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
+@keyframes spin {
   to {
-    opacity: 1;
+    transform: rotate(360deg);
   }
-}
-
-@keyframes glitch {
-  0%, 100% { transform: none; opacity: 1; }
-  7% { transform: skew(-0.5deg, -0.9deg); opacity: 0.75; }
-  10% { transform: none; opacity: 1; }
-  27% { transform: none; opacity: 1; }
-  30% { transform: skew(0.8deg, -0.1deg); opacity: 0.75; }
-  35% { transform: none; opacity: 1; }
-  52% { transform: none; opacity: 1; }
-  55% { transform: skew(-1deg, 0.2deg); opacity: 0.75; }
-  50% { transform: none; opacity: 1; }
-  72% { transform: none; opacity: 1; }
-  75% { transform: skew(0.4deg, 1deg); opacity: 0.75; }
-  80% { transform: none; opacity: 1; }
-  95% { transform: none; opacity: 1; }
-  100% { transform: none; opacity: 1; }
-}
-
-@keyframes rotate {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
-
-@keyframes float {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
 }
 
 .animate-on-scroll {
@@ -210,7 +181,7 @@ section {
   transform: translateY(0);
 }
 
-/* Responsive */
+/* ========== RESPONSIVE ========== */
 @media (max-width: 1024px) {
   .section-header h2 {
     font-size: 40px;
@@ -225,5 +196,10 @@ section {
   .section-subtitle {
     font-size: 12px;
     letter-spacing: 3px;
+  }
+  
+  .btn {
+    padding: 12px 28px;
+    font-size: 14px;
   }
 }

@@ -1,0 +1,427 @@
+/* Testimony Forum Styles */
+.testimony-forum {
+  padding: 80px 0;
+  background: var(--dark-bg);
+}
+
+.testimony-actions {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.testimony-filters {
+  margin-bottom: 50px;
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(65, 105, 225, 0.3);
+  border-radius: 50px;
+  padding: 12px 20px;
+  margin-bottom: 20px;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.search-box svg {
+  color: var(--primary-blue);
+  margin-right: 10px;
+}
+
+.search-box input {
+  flex: 1;
+  background: none;
+  border: none;
+  color: var(--text-light);
+  font-size: 16px;
+  outline: none;
+}
+
+.search-box input::placeholder {
+  color: var(--text-gray);
+}
+
+.category-filters {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.category-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  background: transparent;
+  border: 1px solid rgba(65, 105, 225, 0.3);
+  color: var(--text-gray);
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: inherit;
+  font-size: 14px;
+}
+
+.category-btn:hover,
+.category-btn.active {
+  background: var(--primary-blue);
+  color: white;
+  border-color: var(--primary-blue);
+}
+
+.featured-section {
+  margin-bottom: 60px;
+}
+
+.featured-section h3 {
+  font-size: 28px;
+  margin-bottom: 30px;
+  color: var(--primary-blue);
+}
+
+.featured-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 30px;
+}
+
+.testimonies-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 30px;
+}
+
+.testimony-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  padding: 25px;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(65, 105, 225, 0.1);
+  position: relative;
+}
+
+.testimony-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--primary-blue);
+  box-shadow: 0 10px 30px rgba(65, 105, 225, 0.2);
+}
+
+.featured-badge {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: linear-gradient(135deg, #FFD700, #FFA500);
+  color: #000;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.testimony-card-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.testimony-avatar {
+  width: 50px;
+  height: 50px;
+  background: rgba(65, 105, 225, 0.2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  color: var(--primary-blue);
+}
+
+.testimony-card-header h4 {
+  margin: 0;
+  font-size: 16px;
+  color: var(--text-light);
+}
+
+.testimony-date {
+  font-size: 12px;
+  color: var(--text-gray);
+}
+
+.testimony-category-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  margin-left: auto;
+}
+
+.testimony-card h3 {
+  font-size: 18px;
+  margin-bottom: 12px;
+  color: var(--text-light);
+}
+
+.testimony-excerpt {
+  color: var(--text-gray);
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.testimony-card-actions {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.testimony-card-actions button {
+  background: transparent;
+  border: none;
+  color: var(--text-gray);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 13px;
+  padding: 5px 10px;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+}
+
+.testimony-card-actions button:hover {
+  color: var(--primary-blue);
+  background: rgba(65, 105, 225, 0.1);
+}
+
+.testimony-card-actions button.liked {
+  color: var(--primary-blue);
+}
+
+.read-more {
+  margin-left: auto;
+  color: var(--primary-blue) !important;
+  font-weight: 600;
+}
+
+/* Modal Styles */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(5px);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.modal-content {
+  background: var(--dark-bg);
+  border-radius: 20px;
+  max-width: 500px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  padding: 30px;
+  position: relative;
+  border: 1px solid var(--primary-blue);
+}
+
+.modal-large {
+  max-width: 700px;
+}
+
+.modal-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+  color: var(--text-gray);
+  font-size: 20px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.modal-close:hover {
+  color: var(--primary-blue);
+}
+
+.modal-content h3 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.modal-content > p {
+  color: var(--text-gray);
+  margin-bottom: 25px;
+}
+
+/* Form Styles */
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 14px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(65, 105, 225, 0.3);
+  border-radius: 10px;
+  color: var(--text-light);
+  font-family: inherit;
+  font-size: 14px;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--primary-blue);
+}
+
+.form-group.checkbox label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  color: var(--text-gray);
+  font-size: 14px;
+}
+
+.form-group.checkbox input {
+  width: auto;
+}
+
+/* Testimony Detail */
+.testimony-detail .testimony-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.testimony-author {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--text-gray);
+  font-size: 14px;
+}
+
+.testimony-category {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 5px 12px;
+  background: rgba(65, 105, 225, 0.1);
+  border-radius: 20px;
+  color: var(--primary-blue);
+}
+
+.testimony-detail h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.testimony-text {
+  color: var(--text-gray);
+  line-height: 1.8;
+  font-size: 16px;
+  margin-bottom: 30px;
+}
+
+.testimony-stats {
+  display: flex;
+  gap: 20px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.testimony-stats button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: none;
+  border: none;
+  color: var(--text-gray);
+  cursor: pointer;
+  padding: 8px 16px;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+}
+
+.testimony-stats button:hover {
+  background: rgba(65, 105, 225, 0.1);
+  color: var(--primary-blue);
+}
+
+/* Empty State */
+.empty-state {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.empty-state svg {
+  font-size: 64px;
+  color: var(--primary-blue);
+  margin-bottom: 20px;
+}
+
+.empty-state h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.empty-state p {
+  color: var(--text-gray);
+  margin-bottom: 30px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .featured-grid,
+  .testimonies-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .category-filters {
+    gap: 10px;
+  }
+  
+  .category-btn {
+    padding: 8px 16px;
+    font-size: 12px;
+  }
+  
+  .modal-content {
+    padding: 20px;
+  }
+  
+  .testimony-stats {
+    flex-wrap: wrap;
+  }
+  
+  .testimony-detail h2 {
+    font-size: 22px;
+  }
+}
