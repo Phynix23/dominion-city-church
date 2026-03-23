@@ -3,7 +3,6 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
 import { FaMapMarkerAlt, FaPhone, FaEnvelope, FaClock, FaFacebookF, FaInstagram, FaYoutube, FaTwitter, FaWhatsapp, FaTelegram } from 'react-icons/fa';
-import { toast } from 'react-toastify';
 import './Contact.css';
 
 const branches = [
@@ -45,10 +44,10 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (!formData.name || !formData.email || !formData.message) {
-      toast.error('Please fill in all required fields');
+      alert('Please fill in all required fields');
       return;
     }
-    toast.success('Message sent successfully! We will get back to you soon.');
+    alert('Message sent successfully! We will get back to you soon.');
     setFormData({ name: '', email: '', subject: '', message: '' });
   };
 
@@ -221,12 +220,12 @@ const Contact = () => {
             </div>
 
             <div className="social-links-large">
-              <a href="#" className="social-icon"><FaFacebookF /></a>
-              <a href="#" className="social-icon"><FaInstagram /></a>
-              <a href="#" className="social-icon"><FaYoutube /></a>
-              <a href="#" className="social-icon"><FaTwitter /></a>
-              <a href="#" className="social-icon"><FaWhatsapp /></a>
-              <a href="#" className="social-icon"><FaTelegram /></a>
+              <a href="https://facebook.com/dominioncity" className="social-icon" target="_blank" rel="noopener noreferrer"><FaFacebookF /></a>
+              <a href="https://instagram.com/dominioncity" className="social-icon" target="_blank" rel="noopener noreferrer"><FaInstagram /></a>
+              <a href="https://youtube.com/dominioncity" className="social-icon" target="_blank" rel="noopener noreferrer"><FaYoutube /></a>
+              <a href="https://twitter.com/dominioncity" className="social-icon" target="_blank" rel="noopener noreferrer"><FaTwitter /></a>
+              <a href="https://wa.me/2341234567890" className="social-icon" target="_blank" rel="noopener noreferrer"><FaWhatsapp /></a>
+              <a href="https://t.me/dominioncity" className="social-icon" target="_blank" rel="noopener noreferrer"><FaTelegram /></a>
             </div>
           </div>
         </section>
